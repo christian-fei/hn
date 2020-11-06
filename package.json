@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/christian-fei/hn/issues"
   },
-  "homepage": "https://github.com/christian-fei/hn#readme"
+  "homepage": "https://github.com/christian-fei/hn#readme",
+  "devDependencies": {
+    "ava": "^3.13.0"
+  }
 }
