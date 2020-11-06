@@ -1,5 +1,6 @@
 {
   "name": "@christian_fei/hn",
+  "publishConfig": { "access": "public" },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
