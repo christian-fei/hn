@@ -10,12 +10,17 @@ test('gets html from https://news.ycombinator.com/', async t => {
 
 test('parses items from html', t => {
   const news = parseNews(html())
-  console.log(JSON.stringify(news, null, 2))
   t.true(Array.isArray(news))
   t.is(news.length, 30)
   t.is(news[0].title, 'Deprecating scp')
   t.is(news[0].author, 'Tomte')
   t.is(news[0].upvotes, 435)
+})
+
+test('fetches HTML and parses items', async t => {
+  const html = await getHTML()
+  const news = parseNews(html)
+  t.is(news.length, 30)
 })
 
 async function getHTML () {
