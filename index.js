@@ -6,9 +6,11 @@ const parseNews = require('./lib/parse-news')
 if (require.main === module) {
   getNews()
     .then(news => {
-      console.log(news)
+      if (process.argv.includes('--json')) {
+        return console.log(JSON.stringify(news, null, 2))
+      }
       for (const n of news) {
-        process.stdout.write(`${n.title} - ${n.upvotes} ${n.comments}\n`)
+        process.stdout.write(`${n.title} - ${n.upvotes} upvotes ${n.comments} comments\n\t${n.url}\n\t${n.link}\n\n`)
       }
     })
     .catch(console.error)
