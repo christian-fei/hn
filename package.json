@@ -1,7 +1,9 @@
 {
   "name": "@christian_fei/hn",
-  "publishConfig": { "access": "public" },
-  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "bin": "index.js",
